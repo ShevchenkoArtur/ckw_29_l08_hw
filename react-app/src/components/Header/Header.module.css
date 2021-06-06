@@ -1,5 +1,29 @@
-.header{}
-.logo{}
-.menu{}
-.list{}
-.item{}
+.header {
+    background-color: #436c9f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.logo {
+    padding: 0 0 0 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.menu {
+    padding: 0 16px 0 0;
+}
+
+.list {
+    list-style: none;
+}
+
+.item {
+}
+
+.item a {
+    text-decoration: none;
+    color: #fff;
+}

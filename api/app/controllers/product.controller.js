@@ -31,6 +31,22 @@ exports.create = (req, res) => {
     });
 };
 
+exports.findAll = (req, res) => {
+  const model = req.query.model;
+  const condition = model ? { model: { [Op.like]: `%${model}%` } } : null;
+
+  Product.findAll({ where: condition })
+      .then(data => {
+        res.send(data);
+      })
+      .catch(err => {
+        res.status(500).send({
+          message:
+              err.message || "Some error occurred while retrieving products."
+        });
+      });
+};
+
 exports.findOne = (req, res) => {
   const id = req.params.id;
 
