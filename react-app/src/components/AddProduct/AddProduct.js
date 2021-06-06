@@ -1,4 +1,7 @@
 import React from 'react'
+import style from './AddProduct.module.css'
+import '../../globalCss/button.css'
+import '../../globalCss/form.css'
 import {NavLink} from "react-router-dom";
 
 const AddProduct = props => {
@@ -14,7 +17,6 @@ const AddProduct = props => {
     }
 
     return (
-        <div>
             <form onSubmit={onSubmit}>
                 <label>Vendor
                     <input type={props.inputControl.vendor.type}
@@ -44,18 +46,17 @@ const AddProduct = props => {
                            onChange={onUpdateInputValue}
                     />
                 </label>
-                <div>
-                    <NavLink to="/product-list">
-                        <button type='button'>
+                <div className={style.action}>
+                    <NavLink to="/">
+                        <button className='button button-secondary' type='button'>
                             Back
                         </button>
                     </NavLink>
-                    <button type='submit'>
+                    <button className='button button-success' type='submit'>
                         Add Product
                     </button>
                 </div>
             </form>
-        </div>
     )
 }
 

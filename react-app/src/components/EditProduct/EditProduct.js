@@ -43,7 +43,7 @@ const EditProduct = props => {
                     />
                 </label>
                 <div>
-                    <NavLink to="/product-list">
+                    <NavLink to="/">
                         <button type='button'>
                             Back
                         </button>

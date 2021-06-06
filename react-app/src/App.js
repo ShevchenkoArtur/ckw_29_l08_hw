@@ -13,7 +13,7 @@ const App = props => {
             <Header/>
             <div className='content-wrapper'>
                 <Switch>
-                    <Route path="/product-list" component={ProductListContainer}/>
+                    <Route exact path="/" component={ProductListContainer}/>
                     <Route path="/add-product" component={AddProductContainer}/>
                     <Route path="/edit-product" component={EditProductContainer}/>
                     <Route component={ErrorPage}/>

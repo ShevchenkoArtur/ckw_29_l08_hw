@@ -11,7 +11,7 @@ const Header = props => {
             <div className={style.menu}>
                 <ul className={style.list}>
                     <li className={style.item}>
-                        <NavLink to="/product-list">
+                        <NavLink to="/">
                             Product List
                         </NavLink>
                     </li>

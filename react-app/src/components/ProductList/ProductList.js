@@ -1,6 +1,7 @@
 import React from 'react'
+import '../../globalCss/button.css'
 import {NavLink} from "react-router-dom";
-import './ProductList.css'
+import style from './ProductList.module.css'
 import deleteIcon from '../../assets/images/icons/deleteIcon.svg'
 import editIcon from '../../assets/images/icons/editIcon.svg'
 
@@ -12,9 +13,9 @@ const ProductList = props => {
 
     return (
         <div>
-            <div >
+            <div className={style.action}>
                 <NavLink to='/add-product'>
-                    <button>Add Product</button>
+                    <button className='button button-success '>Create Product</button>
                 </NavLink>
             </div>
             <table >
