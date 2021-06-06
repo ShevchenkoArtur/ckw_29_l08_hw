@@ -1,7 +1,5 @@
 import React from 'react'
 import style from './AddProduct.module.css'
-import '../../globalCss/button.css'
-import '../../globalCss/form.css'
 import {NavLink} from "react-router-dom";
 
 const AddProduct = props => {

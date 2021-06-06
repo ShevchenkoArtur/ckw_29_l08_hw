@@ -1,5 +1,6 @@
 const GET_PRODUCTS = 'GET_PRODUCTS'
 const DELETE_PRODUCT = 'DELETE_PRODUCT'
+const DELETE_ALL_PRODUCTS = 'DELETE_ALL_PRODUCTS'
 const UPDATE_INPUT_VALUE = 'UPDATE_INPUT_VALUE'
 const RESET_INPUT_VALUE = 'RESET_INPUT_VALUE'
 const SET_EDITED_PRODUCT_ID = 'SET_EDITED_PRODUCT_ID'
@@ -69,6 +70,11 @@ const productsReducer = (state = initialState, action) => {
             return {
                 ...state,
                 products: state.products.filter(product => product.id !== action.id)
+            }
+        case DELETE_ALL_PRODUCTS:
+            return {
+                ...state,
+                products: []
             }
         case UPDATE_INPUT_VALUE:
             switch (action.inputName) {
@@ -154,6 +160,7 @@ const productsReducer = (state = initialState, action) => {
 
 export const getProducts = data => ({type: GET_PRODUCTS, data})
 export const deleteProduct = id => ({type: DELETE_PRODUCT, id})
+export const deleteAllProducts = () => ({type: DELETE_ALL_PRODUCTS})
 export const updateInputValue = (newValue, inputName) => ({type: UPDATE_INPUT_VALUE, newValue, inputName})
 export const resetInputValue = () => ({type: RESET_INPUT_VALUE})
 export const setEditedProductId = id => ({type: SET_EDITED_PRODUCT_ID, id})

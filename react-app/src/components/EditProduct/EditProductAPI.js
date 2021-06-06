@@ -47,6 +47,7 @@ class EditProductAPI extends React.Component {
 
     render() {
         return <EditProduct editProduct={this.editProduct}
+                            products={this.props.products}
                             updateInputValue={this.props.updateInputValue}
                             inputControl={this.props.inputControl}
                             editedProductId={this.props.editedProductId}

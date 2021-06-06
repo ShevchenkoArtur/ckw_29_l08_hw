@@ -1,5 +1,5 @@
 import {connect} from "react-redux";
-import {deleteProduct, getProducts, setEditedProductId} from "../../redux/reducers/productsReducer";
+import {deleteAllProducts, deleteProduct, getProducts, setEditedProductId} from "../../redux/reducers/productsReducer";
 import ProductListAPI from "./ProductListAPI";
 
 const mapStateToProps = state => {
@@ -15,6 +15,9 @@ const mapDispatchToProps = dispatch => {
         },
         deleteProduct: id => {
             dispatch(deleteProduct(id))
+        },
+        deleteAllProducts: () => {
+            dispatch(deleteAllProducts())
         },
         setEditedProductId: id => {
             dispatch(setEditedProductId(id))

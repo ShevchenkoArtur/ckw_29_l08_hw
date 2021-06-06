@@ -8,6 +8,7 @@ class ProductListAPI extends React.Component {
         super(props);
 
         this.onDeleteProduct = this.onDeleteProduct.bind(this)
+        this.onDeleteAllProducts = this.onDeleteAllProducts.bind(this)
     }
 
     componentDidMount() {
@@ -26,8 +27,18 @@ class ProductListAPI extends React.Component {
         this.props.deleteProduct(id)
     }
 
+    onDeleteAllProducts() {
+        axios.delete('http://localhost:8080/api/products')
+            .catch(error => {
+                console.log(error);
+            })
+
+        this.props.deleteAllProducts()
+    }
+
     render() {
         return <ProductList onDeleteProduct={this.onDeleteProduct}
+                            onDeleteAllProducts={this.onDeleteAllProducts}
                             products={this.props.products}
                             setEditedProductId={this.props.setEditedProductId}
         />

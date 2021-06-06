@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../globalCss/button.css'
 import {NavLink} from "react-router-dom";
 import style from './ProductList.module.css'
 import deleteIcon from '../../assets/images/icons/deleteIcon.svg'
@@ -17,6 +16,8 @@ const ProductList = props => {
                 <NavLink to='/add-product'>
                     <button className='button button-success '>Create Product</button>
                 </NavLink>
+
+                <button onClick={props.onDeleteAllProducts} className='button button-danger'>Delete All</button>
             </div>
             <table >
                 <thead>

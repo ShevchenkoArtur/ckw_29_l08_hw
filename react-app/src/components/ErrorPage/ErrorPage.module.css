@@ -1,0 +1,13 @@
+.errorPage {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.action {
+    margin: 64px 0 0 0;
+    text-align: center;
+}
+
+.action button {
+    width: 80%;
+}
